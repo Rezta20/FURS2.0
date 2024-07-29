@@ -11,7 +11,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Menu from "./components/Ｍenu.vue";
+import Menu from "./components/Menu.vue";
 
 export default defineComponent({
   name: "App",
@@ -24,7 +24,7 @@ export default defineComponent({
 <style>
 #app {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
 }
 

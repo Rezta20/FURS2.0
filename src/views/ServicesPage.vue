@@ -12,14 +12,13 @@
           <el-row :gutter="20">
             <el-col :span="10">
               <el-form-item :error="nameError">
-                <el-input v-model="newService.name" size="large" placeholder="服務名稱" />
+                <el-input v-model="newService.name" placeholder="服務名稱" />
               </el-form-item>
             </el-col>
             <el-col :span="10">
               <el-form-item :error="priceError">
                 <el-input
                   v-model.number="newService.price"
-                  size="large"
                   placeholder="價格"
                   type="number"
                   min="0"
@@ -28,7 +27,7 @@
               </el-form-item>
             </el-col>
             <el-col :span="4">
-              <el-button type="primary" @click="addService" :icon="Plus" plain>新增服務</el-button>
+              <el-button type="primary" @click="addService" :icon="Plus">新增服務</el-button>
             </el-col>
           </el-row>
         </el-form>
@@ -38,22 +37,21 @@
     <el-row :gutter="20" style="margin-top: 20px">
       <el-col :span="24">
         <el-table :data="services">
-          <el-table-column prop="name" label="Service Name">
+          <el-table-column prop="name" label="服務名稱">
             <template #default="scope">
               <span style="color: var(--el-color-primary)">{{ scope.row.name }}</span>
             </template>
           </el-table-column>
-          <el-table-column prop="price" label="Price">
+          <el-table-column prop="price" label="價格">
             <template #default="scope"> $ {{ scope.row.price }} </template>
           </el-table-column>
-          <el-table-column label="Actions">
+          <el-table-column>
             <template #default="scope">
-              <el-button @click="openEditDialog(scope.$index, scope.row)" :icon="EditPen" plain />
+              <el-button @click="openEditDialog(scope.$index, scope.row)" :icon="EditPen" />
               <el-button
                 type="danger"
                 @click="openDeleteDialog(scope.$index, scope.row)"
                 :icon="Delete"
-                plain
               />
             </template>
           </el-table-column>

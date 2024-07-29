@@ -31,10 +31,11 @@
         <el-menu-item-group title="Group Two">
           <el-menu-item index="/services">Services</el-menu-item>
           <el-menu-item index="/employees">Employees</el-menu-item>
+          <el-menu-item index="/customers">Customers</el-menu-item>
         </el-menu-item-group>
         <el-sub-menu index="1-4">
           <template #title><span>More</span></template>
-          <el-menu-item index="/bookings">Bookings</el-menu-item>
+          <el-menu-item index="/orders">Orders</el-menu-item>
           <el-menu-item index="/reviews">Reviews</el-menu-item>
         </el-sub-menu>
       </el-sub-menu>
